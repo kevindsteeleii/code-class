@@ -1,4 +1,4 @@
-class QuickUnion_UF_Weighted():
+class QuickUnion_UFW():
     def __init__(self, n):
         '''  
             A weighted version of the QuickUnion_UF class that fashions the root of the smaller tree as sub-tree of the larger to keep the trees from becoming long, skinny ones
