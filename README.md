@@ -2,7 +2,9 @@
 This repo is an attempt to create an online, public record to ~~shame~~ motivate me while I work hard to fill my gaps in knowledge and build on what I already know.
 
 ## Class Listing
+
 This will be a simple listing of the class/course being taken, links, and other info I find pertinent along with a relative link to the directory that holds it.
+
 - [ ] [COURSERA - Princeton Algorithms I](https://www.coursera.org/learn/algorithms-part1/), 
   - [repo link](./coursera-algorithms-part-i)
   - Taught by Robert Sedgewick 
@@ -12,3 +14,6 @@ This will be a simple listing of the class/course being taken, links, and other 
   - [repo link](./problem-solving-algos-ds-python)
   - Online ver. of book by Brad Miller and David Ranum, Luther College 
   - This is an online book with a repl, videos, and other learning aids
+- [ ] [Data Structures and Algorithms in Python](https://127.0.0.1), 
+  - [repo link](./data_structures_algorithms_python)
+  - Following the book by Michael T. Goodrich, Robert Tamassia, Michael H. Goldwasser
