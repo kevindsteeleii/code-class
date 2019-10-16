@@ -15,5 +15,5 @@ This will be a simple listing of the class/course being taken, links, and other 
   - Online ver. of book by Brad Miller and David Ranum, Luther College 
   - This is an online book with a repl, videos, and other learning aids
 - [ ] [Data Structures and Algorithms in Python](https://127.0.0.1), 
-  - [repo link](./data_structures_algorithms_python)
+  - [repo link]('./data_structures_algorithms_python(bk)')
   - Following the book by Michael T. Goodrich, Robert Tamassia, Michael H. Goldwasser
