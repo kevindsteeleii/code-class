@@ -1,9 +1,12 @@
 class Fraction:
     def __init__(self, num, den):
         if den == 0:
-            raise ValueError()
-        self.num = num
-        self.den = den
+            raise ValueError('Denominator cannot be a value of zero')
+        elif type(num) != 'int' or type(den) != 'int':
+            raise TypeError('Numerator and Denominator must be integers.')
+        else:
+            self.num = num
+            self.den = den
 
     def getNum(self):
         return self.num
@@ -36,6 +39,7 @@ def main():
     frac = Fraction(1,3)
     frac2 = Fraction(2,9)
     print(frac)
+    error = Fraction(1, 0)
     frac3 = frac + frac2
     print(frac3)
     print(frac2 > frac3)
