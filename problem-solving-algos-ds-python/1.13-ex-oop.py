@@ -1,16 +1,7 @@
 class Fraction:
     def __init__(self, num, den):
-        if den == 0:
-            raise ValueError()
         self.num = num
         self.den = den
-
-    def getNum(self):
-        return self.num
-
-    def getDen(self):
-        return self.den
-
 
     def __str__(self):
         return '{}/{}'.format(self.num, self.den)
@@ -29,7 +20,6 @@ def gcd(m, n):
         return m
     else:
         return gcd(n, m % n)
-
 
 
 def main():
