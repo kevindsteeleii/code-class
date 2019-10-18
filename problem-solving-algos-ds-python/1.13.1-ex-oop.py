@@ -5,7 +5,6 @@ class Fraction:
         elif type(den) == int and den == 0:
             raise ValueError('Denominator cannot equal 0. Make it a number more than or less than zero.')
         else:
-            den = abs(den)
             _gcd = gcd(num, den)
             self.num = num//_gcd
             self.den = den//_gcd
