@@ -5,6 +5,7 @@ class Fraction:
         elif type(den) == int and den == 0:
             raise ValueError('Denominator cannot equal 0. Make it a number more than or less than zero.')
         else:
+            den = abs(den)
             _gcd = gcd(num, den)
             self.num = num//_gcd
             self.den = den//_gcd
@@ -61,19 +62,53 @@ def gcd(m, n):
     else:
         return gcd(n, m % n)
 
+'''
+14. Design a class to represent a playing card. Now design a class to represent a deck of cards. Using these two classes, implement a favorite card game.
+'''
+
+class Card:
+    def __init__(self, suit=None, card=None):
+        self.suit = suit
+        self.card = card
+
+    def setCard(self, suit, card):
+        self.suit = suit
+        self.card = card
+
+    def getCard(self):
+        return (self.card, self.suit)
+
+    def __str__(self):
+        return '{} of {}'.format(self.card, self.suit)
+
+class Deck:
+    def __init__(self):
+        suits = ['hearts', 'spades', 'clubs', 'diamonds']
+        cards = [str(x) for x in range(1, 14)]
+        cards[0] = 'Ace'
+        cards[10] = 'Jack'
+        cards[11] = 'Queen'
+        cards[12] = 'King'
+
+        self.all_cards = []
+        for suit in suits:
+            for card in cards:
+                self.all_cards.append(Card(suit, card))
+
+    def deal_card(self):
+        return self.all_cards.pop()
+
+    def get_cards(self):
+        return self.all_cards
 
 def main():
-    frac = Fraction(1,3)
-    frac2 = Fraction(2,9)
-    print(frac)
-    frac3 = frac + frac2
-    frac4 = Fraction(5, 9)
+    c = Card('Hearts', 'Ace')
+    d = Deck()
+    cards = d.get_cards()
+    print(c)
 
-    print(frac4 >= frac3)
-    frac5 = frac4 * frac2
-    print(frac5)
-    frac6 = frac4 / frac2
-    print(frac6)
+    for item in cards:
+        print(item)
 
 if __name__ == '__main__':
     main()

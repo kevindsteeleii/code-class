@@ -5,7 +5,6 @@ class Fraction:
         elif type(den) == int and den == 0:
             raise ValueError('Denominator cannot equal 0. Make it a number more than or less than zero.')
         else:
-            den = abs(den)
             _gcd = gcd(num, den)
             self.num = num//_gcd
             self.den = den//_gcd
@@ -18,6 +17,15 @@ class Fraction:
         newnum = self.num * other.den + self.den * other.num
         common = gcd(newnum, newden)
         return Fraction(newnum//common, newden//common)
+
+    __radd__ = __add__
+
+    def __iadd__(self, other):
+        newden = self.den * other.den
+        newnum = self.num * other.den * 2 + self.den * other.num
+        common = gcd(newnum, newden)
+        return Fraction(newnum//common, newden//common)
+        
 
     def __sub__(self, other):
         newden = self.den * other.den
@@ -54,6 +62,9 @@ class Fraction:
         newDen = self.den * other.num
         _gcd = gcd(newNum, newDen)
         return (newNum//_gcd) / (newDen//_gcd)
+
+    def __repr__(self):
+        return '{}/{}'.format(self.num, self.den)
 
 
 def gcd(m, n):
